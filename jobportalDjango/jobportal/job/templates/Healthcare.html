@@ -1,0 +1,210 @@
+{% load static %}
+{% block content %}
+{% include 'user_navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Get a Job in Healthcare</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #28a745;
+            color: white;
+        }
+        .header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        .job-container {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .job-card:hover {
+            transform: scale(1.05);
+        }
+        .job-card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #28a745;
+        }
+        .job-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .job-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .job-card .salary {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            color: #333;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .tips-list {
+            list-style-type: none;
+            padding: 10;
+            text-align: center;
+        }
+        .tips-list p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section-title">
+        <h2>How to Get and Succeed in Healthcare Jobs</h2>
+    </div>
+    <div class="tips-list">
+        <ul>
+            <p>Start learning medical concepts through online courses and certifications.</p>
+            <p>Build experience by volunteering in healthcare settings.</p>
+            <p>Stay updated with advancements in healthcare practices and technologies.</p>
+            <p>Develop strong communication and empathy skills.</p>
+            <p>Network with healthcare professionals and attend conferences.</p>
+            <p>Stay consistent and passionate about your healthcare journey.</p>
+        </ul>
+    </div>
+
+    <div class="job-container">
+        <!-- Job 1: Doctor -->
+        <div class="job-card">
+            <div class="icon">&#128137;</div> <!-- Stethoscope Icon -->
+            <h3>Doctor</h3>
+            <p>A Doctor diagnoses and treats patients' medical conditions.</p>
+            <p><strong>Skills:</strong> Medicine, patient care, diagnostic skills, problem-solving.</p>
+            <p><strong>Salary:</strong> ₹10-30 LPA</p>
+            <p class="salary">How to Start: Complete a medical degree and gain hands-on experience.</p>
+        </div>
+
+        <!-- Job 2: Nurse -->
+        <div class="job-card">
+            <div class="icon">&#128137;</div> <!-- Stethoscope Icon -->
+            <h3>Nurse</h3>
+            <p>A Nurse provides medical care, administers treatments, and supports doctors and patients.</p>
+            <p><strong>Skills:</strong> Patient care, medical knowledge, communication, empathy.</p>
+            <p><strong>Salary:</strong> ₹3-8 LPA</p>
+            <p class="salary">How to Start: Complete nursing courses and gain clinical experience.</p>
+        </div>
+
+        <!-- Job 3: Pharmacist -->
+        <div class="job-card">
+            <div class="icon">&#128722;</div> <!-- Pill Icon -->
+            <h3>Pharmacist</h3>
+            <p>Pharmacists dispense medications and offer advice on their use.</p>
+            <p><strong>Skills:</strong> Knowledge of pharmaceuticals, communication, patient care.</p>
+            <p><strong>Salary:</strong> ₹5-8 LPA</p>
+            <p class="salary">How to Start: Complete a pharmacy degree and get licensed.</p>
+        </div>
+
+        <!-- Job 4: Medical Laboratory Technician -->
+        <div class="job-card">
+            <div class="icon">&#128269;</div> <!-- Microscope Icon -->
+            <h3>Medical Laboratory Technician</h3>
+            <p>They perform diagnostic tests on patient samples and assist in detecting diseases.</p>
+            <p><strong>Skills:</strong> Laboratory procedures, sample collection, data analysis.</p>
+            <p><strong>Salary:</strong> ₹3-6 LPA</p>
+            <p class="salary">How to Start: Complete a degree or diploma in medical laboratory technology.</p>
+        </div>
+
+        <!-- Job 5: Radiologic Technologist -->
+        <div class="job-card">
+            <div class="icon">&#128247;</div> <!-- Camera Icon -->
+            <h3>Radiologic Technologist</h3>
+            <p>Radiologic Technologists perform imaging procedures such as X-rays, CT scans, and MRIs.</p>
+            <p><strong>Skills:</strong> Imaging technology, patient care, technical skills.</p>
+            <p><strong>Salary:</strong> ₹4-7 LPA</p>
+            <p class="salary">How to Start: Get certified in radiologic technology and gain experience.</p>
+        </div>
+
+        <!-- Job 6: Physiotherapist -->
+        <div class="job-card">
+            <div class="icon">&#128161;</div> <!-- Body Icon -->
+            <h3>Physiotherapist</h3>
+            <p>Physiotherapists help patients improve mobility and relieve pain through physical therapies.</p>
+            <p><strong>Skills:</strong> Physical therapy, anatomy, patient care, communication.</p>
+            <p><strong>Salary:</strong> ₹4-10 LPA</p>
+            <p class="salary">How to Start: Complete a degree in physiotherapy and gain clinical experience.</p>
+        </div>
+
+        <!-- Job 7: Healthcare Administrator -->
+        <div class="job-card">
+            <div class="icon">&#128187;</div> <!-- Laptop Icon -->
+            <h3>Healthcare Administrator</h3>
+            <p>Healthcare Administrators manage the operations and staff of healthcare facilities.</p>
+            <p><strong>Skills:</strong> Management, leadership, healthcare knowledge, problem-solving.</p>
+            <p><strong>Salary:</strong> ₹7-15 LPA</p>
+            <p class="salary">How to Start: Get a degree in healthcare administration or management.</p>
+        </div>
+
+        <!-- Job 8: Dentist -->
+        <div class="job-card">
+            <div class="icon">&#128137;</div> <!-- Tooth Icon -->
+            <h3>Dentist</h3>
+            <p>Dentists diagnose and treat dental problems, as well as promote oral health.</p>
+            <p><strong>Skills:</strong> Dental care, diagnostic skills, surgical skills.</p>
+            <p><strong>Salary:</strong> ₹5-20 LPA</p>
+            <p class="salary">How to Start: Complete a dental degree and gain clinical experience.</p>
+        </div>
+
+        <!-- Job 9: Occupational Therapist -->
+        <div class="job-card">
+            <div class="icon">&#128188;</div> <!-- Tools Icon -->
+            <h3>Occupational Therapist</h3>
+            <p>Occupational Therapists help patients regain skills needed for daily activities after injuries or illnesses.</p>
+            <p><strong>Skills:</strong> Therapy techniques, communication, patience, problem-solving.</p>
+            <p><strong>Salary:</strong> ₹4-8 LPA</p>
+            <p class="salary">How to Start: Complete a degree in occupational therapy and gain hands-on experience.</p>
+        </div>
+
+        <!-- Job 10: Mental Health Counselor -->
+        <div class="job-card">
+            <div class="icon">&#128561;</div> <!-- Stress Icon -->
+            <h3>Mental Health Counselor</h3>
+            <p>Mental Health Counselors help individuals cope with mental health issues through therapy and counseling.</p>
+            <p><strong>Skills:</strong> Psychological counseling, empathy, communication skills.</p>
+            <p><strong>Salary:</strong> ₹4-7 LPA</p>
+            <p class="salary">How to Start: Obtain a degree in psychology or counseling and start with clinical practice.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Healthcare Career Portal | All rights reserved.</p>
+    </div>
+
+</body>
+</html>
+{% endblock %}

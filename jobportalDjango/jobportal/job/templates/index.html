@@ -1,0 +1,280 @@
+{% load static %}
+{% block body %}
+{% include 'navigation.html' %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+        background-color: #28a745;
+        padding: 15px;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+    }
+
+    .navbar a:hover {
+        color: #d4edda;
+        transition: color 0.3s ease;
+    }
+  .intro {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .intro p {
+        font-size: 18px;
+        color: #555;
+    }
+    /* Banner Image */
+    .banner img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+
+    /* Section Header */
+    .section-header {
+        text-align: center;
+        color: #28a745;
+        font-weight: bold;
+        margin: 30px 0 15px;
+        font-size: 32px;
+    }
+
+    /* Cards */
+    .card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 15px;
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 3px solid #28a745;
+    }
+
+    .card p {
+                text-align: center;
+
+        padding: 10px;
+        font-size: 18px;
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    .card-content {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #28a745;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer a {
+        color: #d4edda;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    footer a:hover {
+        color: white;
+    }
+
+</style>
+
+<div class="container">
+    <!-- Banner -->
+    <div class="banner">
+        <img src="{% static 'images/portal.png' %}" alt="Portal">
+    </div>
+    <div class="intro">
+                <h1 class="section-header">Welcome to Career Connect Job Portal where talent meets success</h1>
+     </h1>
+    <p>Find the best jobs and start your career today start by connecting us</p>
+    </div>
+<div class="intro">
+        <h1 class="section-header">Our Achievements</h1>
+        <p>
+            We take immense pride in the accomplishments of our students who have successfully secured placements
+            in leading companies around the globe. Their dedication and our guidance have led to outstanding results.
+        </p>
+    </div>
+    <div class="testimonials" style="background-color: #f4f4f4; color: #333; padding: 60px 0;">
+    <div class="container">
+        <h2 class="text-center" style="font-size: 36px; font-weight: bold; color: #007b5e;">What Our Users Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial" style="border: 2px solid #007b5e; padding: 20px; border-radius: 10px; text-align: center;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk_nIiXvWFWyV64bFUtfATT242m-7i3CDfxg&s" alt="User 1" class="img-fluid rounded-circle mb-3">
+                    <p>"This platform helped me land my dream job. I am extremely grateful!"</p>
+                    <p><strong>- Ravi Kumar</strong></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial" style="border: 2px solid #007b5e; padding: 20px; border-radius: 10px; text-align: center;">
+                    <img src="https://as1.ftcdn.net/jpg/05/05/18/12/220_F_505181244_DRaXgcbNrIYdNqq4I2b0jLYOeSQYq3wh.jpg" alt="User 2" class="img-fluid rounded-circle mb-3">
+                    <p>"A very easy and straightforward job search process. Highly recommended!"</p>
+                    <p><strong>- Priya Sharma</strong></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial" style="border: 2px solid #007b5e; padding: 20px; border-radius: 10px; text-align: center;">
+                    <img src="https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM=" alt="User 3" class="img-fluid rounded-circle mb-3">
+                    <p>"Great experience! The application process was quick and seamless."</p>
+                    <p><strong>- Amit Verma</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="testimonial" style="border: 2px solid #007b5e; padding: 20px; border-radius: 10px; text-align: center;">
+                    <img src="https://t3.ftcdn.net/jpg/03/48/39/40/360_F_348394011_e1kTyJJHDSKd5BZE6S3VXizesSgH4n1Y.jpg" alt="User 4" class="img-fluid rounded-circle mb-3">
+                    <p>"Fantastic platform! I received job offers within weeks of signing up."</p>
+                    <p><strong>- Neha </strong></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial" style="border: 2px solid #007b5e; padding: 20px; border-radius: 10px; text-align: center;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1rml8KZsxFvrLKV_H7s3O2yUbxR4ixxE7dzVM-06QS9qRCxpRDjBBaZArV0AAV6Q-d0U&usqp=CAU" alt="User 5" class="img-fluid rounded-circle mb-3">
+                    <p>"The process is very user-friendly and I felt supported throughout."</p>
+                    <p><strong>- Rajesh Kumar</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Section Header -->
+    <h1 class="section-header">OUR PLACED STUDENTS</h1>
+
+    <!-- Student Cards -->
+    <div class="row">
+        {% for student in students %}
+        <div class="col-md-3">
+            <div class="card">
+                <img src="{% static student.image %}" alt="{{ student.name }}">
+                <p>{{ student.company }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+<div class="row">
+        <div class="col-md-3">
+            <img src="{% static 'images/f.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Facebook</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f1.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Amazon</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f2.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Flipkart</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f3.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Google</p>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-md-3">
+            <img src="{% static 'images/f4.png'%}" style="width=90%; margin-top:5%; height:160px; border-radius:50%">
+            <div class="content" style="height:30px; width:91%">
+                <p>JP Morgan</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f5.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Software sol</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f6.png'%}" style="width=100%; margin-top:5%; height:190px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Deloite</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f7.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Barclays</p>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-md-3">
+            <img src="{% static 'images/f8.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Paypal</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f9.png'%}" style="width=100%; margin-top:5%; height:220px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Adobe</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f10.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Infosys</p>
+            </div>
+        </div>
+          <div class="col-md-3">
+            <img src="{% static 'images/f11.png'%}" style="width=100%; margin-top:5%; height:200px; border-radius:60%">
+            <div class="content" style="height:30px; width:91%">
+                <p>Wipro</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+{% include 'footer.html' %}
+{% endblock %}

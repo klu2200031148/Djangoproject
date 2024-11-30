@@ -1,0 +1,116 @@
+{% load static %}
+{% block boy %}
+{% include 'user_navigation.html' %}
+
+<div>
+    <img src="{% static 'images/img4.jpg' %}" style="height:73%; width:100%">
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Explore Tips And Job Categories</h2>
+    <div class="row">
+        <!-- Category Card 1 -->
+        <div class="col-md-4 mb-4">
+            <a class="category-card">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fa fa-laptop fa-3x text-success mb-3"></i>
+                        <a href="{% url 'IT' %}" class="card-title">
+                            <h5>Information Technology</h5>
+                        </a>
+                        <p class="card-text">Find the best IT jobs here!</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Category Card 2 -->
+        <div class="col-md-4 mb-4">
+            <a class="category-card">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fa fa-heartbeat fa-3x text-danger mb-3"></i>
+                        <a href="{% url 'Healthcare' %}" class="card-title">
+                            <h5>Healthcare</h5>
+                        </a>
+                        <p class="card-text">Explore jobs in healthcare.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Category Card 3 -->
+        <div class="col-md-4 mb-4">
+            <a class="category-card">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fa fa-bullhorn fa-3x text-primary mb-3"></i>
+                        <a href="{% url 'Marketing' %}" class="card-title">
+                            <h5>Marketing</h5>
+                        </a>
+                        <p class="card-text">Discover marketing roles.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Category Card 4 -->
+        <div class="col-md-4 mb-4">
+            <a class="category-card">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fa fa-money fa-3x text-warning mb-3"></i>
+                        <a href="{% url 'Finance' %}" class="card-title">
+                            <h5>Finance</h5>
+                        </a>
+                        <p class="card-text">Jobs in finance and accounting.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Category Card 5 -->
+        <div class="col-md-4 mb-4">
+            <a class="category-card">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fa fa-graduation-cap fa-3x text-info mb-3"></i>
+                        <a href="{% url 'Education' %}" class="card-title">
+                            <h5>Education</h5>
+                        </a>
+                        <p class="card-text">Teaching and education roles.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Category Card 6 -->
+        <div class="col-md-4 mb-4">
+            <a class="category-card">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fa fa-building fa-3x text-secondary mb-3"></i>
+                        <a href="{% url 'Construction' %}" class="card-title">
+                            <h5>Construction</h5>
+                        </a>
+                        <p class="card-text">Opportunities in construction.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Stylish Call-to-Action Section for Resume Tips -->
+<section id="resume-tips-cta" class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="display-4 mb-3">Want Your Resume to Stand Out?</h2>
+        <p class="lead mb-4">Click below for expert resume tips that will elevate your job application and make a lasting impression.</p>
+        <a href="ResumeTips" class="btn btn-light btn-lg px-4 py-2 rounded-pill shadow-lg">Get Resume Tips Now</a>
+    </div>
+</section>
+
+
+</div>
+</div>
+
+<!-- Footer positioned directly below the form -->
+<div class="footer" style="background-color: #333; color: white; padding: 15px; text-align: center; width: 100%; margin-top: 30px;">
+    <p>&copy; 2024 Career Connect Job Portal. All Rights Reserved.</p>
+</div>
+
+{% endblock %}

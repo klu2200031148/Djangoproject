@@ -1,0 +1,230 @@
+{% load static %}
+{% block body %}
+{% include 'recruiter_navigation.html' %}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+    }
+    .banner img {
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+
+     .intro {
+        text-align: center;
+        margin: 20px 0;
+        color: #28a745;
+    }
+
+    .intro p {
+        font-size: 18px;
+        color: #555;
+    }
+    .section {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .section h2 {
+        font-size: 32px;
+        font-weight: bold;
+        color: #28a745;
+        margin-bottom: 20px;
+    }
+
+    .section p {
+        font-size: 1.2em;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 300px;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 15px;
+        text-align: left;
+    }
+
+    .stats-section {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 40px 0;
+    }
+
+    .stats-item h4 {
+        font-size: 32px;
+        color: #28a745;
+        margin-bottom: 10px;
+    }
+
+    .stats-item p {
+        font-size: 18px;
+        color: #555;
+    }
+
+    .get-started {
+        background-color: #007bff;
+        color: white;
+        padding: 40px 20px;
+    }
+
+    .get-started a {
+        display: inline-block;
+        background-color: white;
+        color: #007bff;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .get-started a:hover {
+        background-color: #ddd;
+    }
+
+    .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+</style>
+
+<div class="container">
+    <!-- Banner Section -->
+    <div class="banner">
+        <img src="https://www.recruiteze.com/wp-content/uploads/2019/05/bigstock-Recruitment-Concept-With-Chara-290328748.jpg" alt="Career Portal">
+    </div>
+
+   <div class="intro">
+                <h1 class="section-header">Welcome to Career Connect Job Portal where talent meets success</h1>
+     </h1>
+    <p>Your Talent Search Starts Here</p>
+    </div>
+<div class="intro">
+        <h1 class="section-header">About Us</h1>
+        <p>
+           We are dedicated to connecting recruiters with top talent through cutting-edge technology and personalized solutions. Your recruitment success is our mission.
+        </p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="section features">
+        <h2>Why Choose Our Platform?</h2>
+        <div class="row">
+            <div class="col-md-4 feature-item">
+                <i class="fa fa-briefcase" style="font-size: 50px; color: #28a745;"></i>
+                <h4>Seamless Job Posting</h4>
+                <p>Reach a wide audience and advertise your job openings effortlessly.</p>
+            </div>
+            <div class="col-md-4 feature-item">
+                <i class="fa fa-users" style="font-size: 50px; color: #28a745;"></i>
+                <h4>Efficient Applicant Management</h4>
+                <p>Streamline your recruitment process with our centralized dashboard.</p>
+            </div>
+            <div class="col-md-4 feature-item">
+                <i class="fa fa-search" style="font-size: 50px; color: #28a745;"></i>
+                <h4>Find Talent</h4>
+                <p>Discover and connect with professionals to build your dream team.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Stories -->
+    <div class="section success-stories">
+        <h2>Our Success Stories</h2>
+        <p>Discover how recruiters like you have found success through our platform.</p>
+        <div class="row">
+            <div class="col-md-4 story-item">
+                <div class="card">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/045/782/633/small_2x/confident-businessman-in-modern-office-setting-professional-portrait-corporate-attire-natural-light-photo.jpg" alt="Story 1">
+                    <div class="card-content">
+                        <h4>Akash, Tech Recruiter</h4>
+                        <p>"I hired 20+ talented developers in record time."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 story-item">
+                <div class="card">
+                    <img src="https://www.allianceresourcegroup.com/wp-content/uploads/2022/10/Young-accounting-professional-female-Asian.jpeg" alt="Story 2">
+                    <div class="card-content">
+                        <h4>Samyukta, HR Manager</h4>
+                        <p>"Our recruitment process has never been this smooth."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 story-item">
+                <div class="card">
+                    <img src="https://peoplefirstprojectmanagement.com/wp-content/uploads/Develop-People-shutterstock_562245580-600.jpg" alt="Story 3">
+                    <div class="card-content">
+                        <h4>Rahul, Startup Founder</h4>
+                        <p>"We built our dream team in just 3 weeks!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Get Started Section -->
+    <div class="get-started">
+         <h2>We'd Love to Hear From You!</h2>
+    <p>Share your thoughts and feedback with us to help improve our services.</p>
+        <a href="{% url 'submit_recruiter_feedback' %}">Feedback</a>
+    </div>
+</div>
+    <!-- Statistics -->
+    <div class="stats-section">
+        <div class="stats-item">
+            <h4>70+</h4>
+            <p>Jobs Posted</p>
+        </div>
+        <div class="stats-item">
+            <h4>500+</h4>
+            <p>Candidates Hired</p>
+        </div>
+        <div class="stats-item">
+            <h4>120+</h4>
+            <p>Active Recruiters</p>
+        </div>
+    </div>
+
+
+    <!-- Get Started Section -->
+    <div class="get-started">
+        <h2>Ready to Find Top Talent?</h2>
+        <p>Start your journey with us today and experience a new way of recruitment.</p>
+        <a href="{% url 'add_job' %}">Post a Job</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 Career Connect Job Portal. All Rights Reserved.</p>
+</div>
+
+{% endblock %}

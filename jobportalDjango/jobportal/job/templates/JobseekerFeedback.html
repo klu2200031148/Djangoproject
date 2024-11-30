@@ -1,0 +1,71 @@
+<!-- Job Seeker Feedback Form -->
+{% load static %}
+{% block body %}
+{% include 'user_navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>We'd Love to Hear Feedback From You!</h1>
+    <form action="/submit_jobseeker_feedback/" method="POST">
+        {% csrf_token %}
+        <label for="full_name">Full Name</label>
+        <input type="text" id="full_name" name="full_name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="feedback">Feedback</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</div>
+<div class="footer" style="background-color: #333; color: white; padding: 15px; text-align: center; width: 100%; margin-top: 50px;">
+        <p>&copy; 2024 Career Connect Job Portal. All Rights Reserved.</p>
+    </div>
+</body>
+{% endblock %}

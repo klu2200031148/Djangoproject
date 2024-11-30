@@ -1,0 +1,125 @@
+{% block body %}
+{% include 'recruiter_navigation.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications for {{ job.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table thead {
+            background-color: #007bff;
+            color: white;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            font-size: 1em;
+        }
+
+        table td {
+            font-size: 0.9em;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .action-btn {
+            padding: 5px 10px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9em;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .action-btn:hover {
+            background-color: #218838;
+        }
+
+        .no-applications {
+            text-align: center;
+            color: #999;
+            font-size: 1.2em;
+            margin: 30px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Applications for {{ job.title }}</h1>
+
+    {% if applications %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Experience Level</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for application in applications %}
+                    <tr>
+                        <td>{{ application.name }}</td>
+                        <td>{{ application.email }}</td>
+                        <td>{{ application.phone }}</td>
+                        <td>{{ application.experience_level }}</td>
+                        <td>
+                            <a class="action-btn" href="{% url 'application_details' application.id %}">View Details</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="no-applications">No applications for this job yet.</div>
+    {% endif %}
+
+    <footer>
+        <p>&copy; 2024 Career Connect Job Portal. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+{% endblock %}

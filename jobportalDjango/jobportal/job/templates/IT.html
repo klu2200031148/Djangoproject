@@ -1,0 +1,215 @@
+{% load static %}
+{% block content %}
+{% include 'user_navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+    <title>How to Get a Job in IT</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #007BFF;
+            color: white;
+        }
+        .header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        .job-container {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .job-card:hover {
+            transform: scale(1.05);
+        }
+        .job-card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+        .job-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .job-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .job-card .salary {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            color: #333;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .tips-list {
+            list-style-type: none;
+            padding: 10;
+            text-align: center;
+        }
+        .tips-list p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+
+     <div class="section-title">
+        <h2>How to Get and Succeed in IT Jobs</h2>
+    </div>
+     <div class="tips-list">
+        <ul>
+            <p>Start learning relevant technologies through online courses and tutorials.</p>
+            <p>Work on projects that demonstrate your skills and build a portfolio.</p>
+            <p>Stay updated on industry trends and continuously improve your knowledge.</p>
+            <p>Do relevant certifications</p>
+            <p>Get internships to gain hands-on experience.</p>
+            <p>Network with professionals in the field and attend tech meetups and conferences.</p>
+            <p> And finally be consistent</p>
+        </ul>
+    </div>
+    <div class="job-container">
+        <!-- Job 1: Software Developer -->
+        <div class="job-card">
+            <div class="icon">&#128187;</div> <!-- Laptop icon -->
+            <h3>Software Developer</h3>
+            <p>A Software Developer designs, develops, and maintains software applications.</p>
+            <p><strong>Skills:</strong> Java, Python, C++, algorithms, problem-solving.</p>
+            <p><strong>Salary:</strong> ₹6-10 LPA</p>
+            <p class="salary">How to Start: Learn programming languages, work on projects.</p>
+        </div>
+
+        <!-- Job 2: Data Scientist -->
+        <div class="job-card">
+            <div class="icon">&#128202;</div> <!-- Bar Chart icon -->
+            <h3>Data Scientist</h3>
+            <p>A Data Scientist uses advanced analytics, machine learning, and statistical methods to extract insights from data.</p>
+            <p><strong>Skills:</strong> Python, SQL, Machine Learning, Data Visualization.</p>
+            <p><strong>Salary:</strong> ₹8-12 LPA</p>
+            <p class="salary">How to Start: Learn Python and ML algorithms, work on data analysis projects.</p>
+        </div>
+
+        <!-- Job 3: IT Support Specialist -->
+        <div class="job-card">
+            <div class="icon">&#128187;</div> <!-- Desktop Icon -->
+            <h3>IT Support Specialist</h3>
+            <p>IT Support Specialists troubleshoot and maintain hardware, software, and network issues.</p>
+            <p><strong>Skills:</strong> Networking, hardware troubleshooting, customer support.</p>
+            <p><strong>Salary:</strong> ₹3-5 LPA</p>
+            <p class="salary">How to Start: Learn basic networking, OS, and troubleshooting skills.</p>
+        </div>
+
+        <!-- Job 4: Web Developer -->
+        <div class="job-card">
+            <div class="icon">&#128295;</div> <!-- Code Icon -->
+            <h3>Web Developer</h3>
+            <p>A Web Developer builds and maintains websites, ensuring they are functional and visually appealing.</p>
+            <p><strong>Skills:</strong> HTML, CSS, JavaScript, React, Node.js.</p>
+            <p><strong>Salary:</strong> ₹4-8 LPA</p>
+            <p class="salary">How to Start: Learn web development frameworks and work on real projects.</p>
+        </div>
+
+        <!-- Job 5: Network Engineer -->
+        <div class="job-card">
+            <div class="icon">&#128256;</div> <!-- Network Icon -->
+            <h3>Network Engineer</h3>
+            <p>Network Engineers design and implement computer networks to ensure efficient communication.</p>
+            <p><strong>Skills:</strong> Networking protocols, TCP/IP, Cisco certifications.</p>
+            <p><strong>Salary:</strong> ₹6-9 LPA</p>
+            <p class="salary">How to Start: Learn networking protocols and get Cisco certification.</p>
+        </div>
+
+        <!-- Job 6: Cloud Engineer -->
+        <div class="job-card">
+            <div class="icon">&#9733;</div> <!-- Cloud Icon -->
+            <h3>Cloud Engineer</h3>
+            <p>Cloud Engineers manage cloud computing services, including data storage, computing power, and networking.</p>
+            <p><strong>Skills:</strong> AWS, Azure, GCP, Cloud architecture.</p>
+            <p><strong>Salary:</strong> ₹10-20 LPA</p>
+            <p class="salary">How to Start: Learn cloud platforms, get certified in AWS or Azure.</p>
+        </div>
+
+        <!-- Job 7: Cybersecurity Analyst -->
+        <div class="job-card">
+            <div class="icon">&#128274;</div> <!-- Shield Icon -->
+            <h3>Cybersecurity Analyst</h3>
+            <p>Cybersecurity Analysts protect systems and networks from cyber threats.</p>
+            <p><strong>Skills:</strong> Network security, penetration testing, ethical hacking.</p>
+            <p><strong>Salary:</strong> ₹7-15 LPA</p>
+            <p class="salary">How to Start: Learn about security tools, ethical hacking, and certifications (CEH).</p>
+        </div>
+
+        <!-- Job 8: Mobile App Developer -->
+        <div class="job-card">
+            <div class="icon">&#128241;</div> <!-- Mobile Icon -->
+            <h3>Mobile App Developer</h3>
+            <p>Mobile App Developers create applications for smartphones and tablets.</p>
+            <p><strong>Skills:</strong> Java, Swift, Kotlin, UI/UX design, Android/iOS development.</p>
+            <p><strong>Salary:</strong> ₹5-10 LPA</p>
+            <p class="salary">How to Start: Learn mobile app frameworks, build apps, and publish them on app stores.</p>
+        </div>
+
+        <!-- Job 9: UI/UX Designer -->
+        <div class="job-card">
+            <div class="icon">&#128200;</div> <!-- Design Icon -->
+            <h3>UI/UX Designer</h3>
+            <p>UI/UX Designers focus on user interface and user experience design for digital products.</p>
+            <p><strong>Skills:</strong> Adobe XD, Sketch, wireframing, user research.</p>
+            <p><strong>Salary:</strong> ₹4-8 LPA</p>
+            <p class="salary">How to Start: Learn design tools, and focus on building portfolio projects.</p>
+        </div>
+
+        <!-- Job 10: AI Engineer -->
+        <div class="job-card">
+            <div class="icon">&#128161;</div> <!-- Brain Icon -->
+            <h3>AI Engineer</h3>
+            <p>AI Engineers design and develop systems that mimic human intelligence, such as machine learning and deep learning models.</p>
+            <p><strong>Skills:</strong> Python, TensorFlow, Deep Learning, NLP, AI algorithms.</p>
+            <p><strong>Salary:</strong> ₹10-25 LPA</p>
+            <p class="salary">How to Start: Learn AI frameworks, work on ML projects, and get certified.</p>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="footer">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </div>
+</body>
+</html>
+{% endblock %}

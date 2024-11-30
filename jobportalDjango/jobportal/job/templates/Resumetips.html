@@ -1,0 +1,246 @@
+{% load static %}
+{% block boy %}
+{% include 'user_navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Create a Standout Resume</title>
+    <!-- Add Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* Section Styling */
+#standout-resume {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #343a40;
+    font-weight: 700;
+}
+
+.lead {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.tip-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tip-title {
+    font-size: 1.25rem;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.tip-text {
+    font-size: 1rem;
+    color: #495057;
+    margin-top: 10px;
+}
+
+.cta-section h4 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.cta-section .btn-primary {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-section .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Standout Resume Section for Homepage -->
+<section id="standout-resume" class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="section-title mb-4">How to Create a Standout Resume</h2>
+        <p class="lead mb-4">Crafting a great resume is essential for landing your dream job. Here are some key tips to make your resume stand out!</p>
+        <div class="row">
+            <!-- Resume Tip 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="tip-card p-4 rounded shadow-sm">
+                     <h5>1. Tailor Your Resume for Each Job</h5>
+                    <p class="tips-list">Customize your resume to fit the job you're applying for. Highlight your skills and experience that are most relevant to the job description.</p>
+                </div>
+            </div>
+            <!-- Resume Tip 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="tip-card p-4 rounded shadow-sm">
+                    <h5>2. Use a Clean and Simple Layout</h5>
+                    <p class="tips-list">Ensure your resume is easy to read. Avoid using too many fonts or colors. Stick to a professional font like Arial or Calibri and use bullet points for easy scanning.</p>
+                </div>
+            </div>
+            <!-- Resume Tip 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="tip-card p-4 rounded shadow-sm">
+                     <h5>3. Highlight Achievements, Not Just Responsibilities</h5>
+                    <p class="tips-list">Employers want to know what you've accomplished. Instead of listing your duties, focus on specific achievements, such as "increased sales by 30%" or "led a team of 5 to achieve X goal."</p>
+                </div>
+            </div>
+             <!-- Resume Tip 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="tip-card p-4 rounded shadow-sm">
+                     <h5>4. Keep It Concise</h5>
+                    <p class="tips-list">Limit your resume to one or two pages, especially if you're in the early stages of your career. Focus on the most recent and relevant experiences.</p>
+                     </div>
+            </div>
+
+             <!-- Resume Tip 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="tip-card p-4 rounded shadow-sm">
+                    <h5>5. Use Action Words</h5>
+                    <p class="tips-list">Start your bullet points with strong action verbs like "managed," "led," "developed," or "created." This gives your resume energy and impact.</p>
+                    </div>
+            </div>
+
+             <!-- Resume Tip 5-->
+            <div class="col-md-4 mb-4">
+                <div class="tip-card p-4 rounded shadow-sm">
+                      <h5>6. Include Keywords from the Job Description</h5>
+                    <p class="tips-list">Many companies use automated systems to screen resumes. Including relevant keywords from the job description can help your resume get noticed by these systems.</p>
+                     </div>
+            </div>
+
+             <!-- Resume Tip 6-->
+            <div class="col-md-4 mb-4">
+                <div class="tip-card p-4 rounded shadow-sm">
+                    <h5>7. Proofread for Errors</h5>
+                    <p class="tips-list">Typos and grammatical errors can create a bad impression. Proofread your resume carefully or ask a friend to review it before submitting.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Call to Action -->
+        <div class="cta-section mt-5">
+            <h4>Ready to Create Your Standout Resume?</h4>
+            <p class="mb-4">Use these tips and start building a resume that gets noticed!</p>
+        </div>
+        <div class="container my-5">
+    <h2 class="text-center mb-4" style="font-family: 'Arial', sans-serif; font-weight: bold; color: #333;">Top 8 Resume Builders</h2>
+    <div class="row">
+        <!-- Resume Builder 1 -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg h-100" style="border-radius: 15px; transition: transform 0.3s ease;">
+                <div class="card-body text-center p-4">
+                    <h5 style="font-size: 1.3rem; font-weight: bold; color: #007bff;">Canva</h5>
+                    <p style="color: #555; font-size: 1rem;">Create beautiful and professional resumes with Canva's easy-to-use templates.</p>
+                    <a href="https://www.canva.com/resumes/templates/" target="_blank" class="btn btn-primary mt-3" style="border-radius: 20px;">Visit Site</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Builder 2 -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg h-100" style="border-radius: 15px; transition: transform 0.3s ease;">
+                <div class="card-body text-center p-4">
+                    <h5 style="font-size: 1.3rem; font-weight: bold; color: #e53946;">Novoresume</h5>
+                    <p style="color: #555; font-size: 1rem;">Professional resume building tools with customizable templates.</p>
+                    <a href="https://novoresume.com/" target="_blank" class="btn btn-danger mt-3" style="border-radius: 20px;">Visit Site</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Builder 3 -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg h-100" style="border-radius: 15px; transition: transform 0.3s ease;">
+                <div class="card-body text-center p-4">
+                    <h5 style="font-size: 1.3rem; font-weight: bold; color: #0d6efd;">Zety</h5>
+                    <p style="color: #555; font-size: 1rem;">Create an exceptional resume with Zety's advanced tools and guidance.</p>
+                    <a href="https://zety.com/" target="_blank" class="btn btn-info mt-3" style="border-radius: 20px;">Visit Site</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Builder 4 -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg h-100" style="border-radius: 15px; transition: transform 0.3s ease;">
+                <div class="card-body text-center p-4">
+                    <h5 style="font-size: 1.3rem; font-weight: bold; color: #17a2b8;">Resume.io</h5>
+                    <p style="color: #555; font-size: 1rem;">Simple and fast resume builder with professional templates.</p>
+                    <a href="https://resume.io/" target="_blank" class="btn btn-success mt-3" style="border-radius: 20px;">Visit Site</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Builder 5 -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg h-100" style="border-radius: 15px; transition: transform 0.3s ease;">
+                <div class="card-body text-center p-4">
+                    <h5 style="font-size: 1.3rem; font-weight: bold; color: #f39c12;">Resumake</h5>
+                    <p style="color: #555; font-size: 1rem;">Fast and simple resume maker with downloadable templates.</p>
+                    <a href="https://resumake.io/" target="_blank" class="btn btn-warning mt-3" style="border-radius: 20px;">Visit Site</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Builder 6 -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg h-100" style="border-radius: 15px; transition: transform 0.3s ease;">
+                <div class="card-body text-center p-4">
+                    <h5 style="font-size: 1.3rem; font-weight: bold; color: #6c757d;">Kickresume</h5>
+                    <p style="color: #555; font-size: 1rem;">Build resumes, cover letters, and personal websites with Kickresume.</p>
+                    <a href="https://www.kickresume.com/" target="_blank" class="btn btn-secondary mt-3" style="border-radius: 20px;">Visit Site</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Builder 7 -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg h-100" style="border-radius: 15px; transition: transform 0.3s ease;">
+                <div class="card-body text-center p-4">
+                    <h5 style="font-size: 1.3rem; font-weight: bold; color: #28a745;">Overleaf</h5>
+                    <p style="color: #555; font-size: 1rem;">Create professional resumes and CVs with Overleaf.</p>
+                    <a href="https://www.overleaf.com/" target="_blank" class="btn btn-success mt-3" style="border-radius: 20px;">Visit Site</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Builder 8 -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg h-100" style="border-radius: 15px; transition: transform 0.3s ease;">
+                <div class="card-body text-center p-4">
+                    <h5 style="font-size: 1.3rem; font-weight: bold; color: #007bff;">Resumup</h5>
+                    <p style="color: #555; font-size: 1rem;">Create visual resumes to stand out with Resumup's unique designs.</p>
+                    <a href="https://resumup.com/" target="_blank" class="btn btn-primary mt-3" style="border-radius: 20px;">Visit Site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+
+<!-- Footer positioned directly below the form -->
+<div class="footer" style="background-color: #333; color: white; padding: 15px; text-align: center; width: 100%; margin-top: 30px;">
+    <p>&copy; 2024 Career Connect Job Portal. All Rights Reserved.</p>
+</div>
+</body>
+</html>
+{% endblock %}

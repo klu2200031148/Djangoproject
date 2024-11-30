@@ -1,0 +1,200 @@
+{% load static %}
+{% block content %}
+{% include 'user_navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Get a Job in Education</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #2d3e50;
+            color: white;
+        }
+        .header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        .job-container {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .job-card:hover {
+            transform: scale(1.05);
+        }
+        .job-card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #2d3e50;
+        }
+        .job-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .job-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .job-card .salary {
+            font-weight: bold;
+            color: #2d3e50;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            color: #333;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .tips-list {
+            list-style-type: none;
+            padding: 10;
+            text-align: center;
+        }
+        .tips-list p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section-title">
+        <h2>How to Get and Succeed in Education Jobs</h2>
+    </div>
+    <div class="tips-list">
+        <ul>
+            <p>Obtain a degree in education or a specialized subject area.</p>
+            <p>Gain experience through internships, teaching assistantships, or tutoring.</p>
+            <p>Develop strong communication and interpersonal skills.</p>
+            <p>Obtain relevant teaching certifications for your region or country.</p>
+            <p>Stay updated on new teaching methods, technologies, and educational trends.</p>
+            <p>Consider pursuing advanced degrees like a Master’s in Education for higher positions.</p>
+        </ul>
+    </div>
+
+    <div class="job-container">
+        <!-- Job 1: School Teacher -->
+        <div class="job-card">
+            <div class="icon">&#128218;</div> <!-- Teacher Icon -->
+            <h3>School Teacher</h3>
+            <p>School Teachers are responsible for instructing students, preparing lesson plans, grading assignments, and fostering a positive learning environment.</p>
+            <p><strong>Skills:</strong> Classroom management, communication, subject knowledge, creativity, and patience.</p>
+            <p><strong>Salary:</strong> ₹3-8 LPA</p>
+            <p class="salary">How to Start: Obtain a Bachelor's in Education (B.Ed) or a related field and pursue teaching certification.</p>
+        </div>
+
+        <!-- Job 2: College Professor -->
+        <div class="job-card">
+            <div class="icon">&#128218;</div> <!-- Professor Icon -->
+            <h3>College Professor</h3>
+            <p>College Professors teach courses in their subject area, conduct research, and mentor students at the college level.</p>
+            <p><strong>Skills:</strong> Expertise in subject area, research, communication, critical thinking, and mentorship.</p>
+            <p><strong>Salary:</strong> ₹6-20 LPA</p>
+            <p class="salary">How to Start: Earn a Master's or PhD in your field and gain experience through research and teaching assistantships.</p>
+        </div>
+
+        <!-- Job 3: Education Administrator -->
+        <div class="job-card">
+            <div class="icon">&#128203;</div> <!-- Admin Icon -->
+            <h3>Education Administrator</h3>
+            <p>Education Administrators oversee educational programs, manage budgets, and ensure that institutions meet regulations and provide quality education.</p>
+            <p><strong>Skills:</strong> Organizational skills, leadership, budgeting, and communication.</p>
+            <p><strong>Salary:</strong> ₹8-25 LPA</p>
+            <p class="salary">How to Start: Obtain a degree in education administration and gain experience managing educational programs or schools.</p>
+        </div>
+
+        <!-- Job 4: Special Education Teacher -->
+        <div class="job-card">
+            <div class="icon">&#128218;</div> <!-- Special Education Icon -->
+            <h3>Special Education Teacher</h3>
+            <p>Special Education Teachers work with students who have disabilities, developing individualized education plans (IEPs) and creating supportive learning environments.</p>
+            <p><strong>Skills:</strong> Patience, adaptability, understanding of disabilities, communication skills.</p>
+            <p><strong>Salary:</strong> ₹4-10 LPA</p>
+            <p class="salary">How to Start: Complete a degree in special education and gain experience through internships and teaching placements.</p>
+        </div>
+
+        <!-- Job 5: Curriculum Developer -->
+        <div class="job-card">
+            <div class="icon">&#128218;</div> <!-- Curriculum Icon -->
+            <h3>Curriculum Developer</h3>
+            <p>Curriculum Developers create educational materials and programs that align with learning standards and meet the needs of students and teachers.</p>
+            <p><strong>Skills:</strong> Educational theory, writing skills, research, attention to detail.</p>
+            <p><strong>Salary:</strong> ₹5-12 LPA</p>
+            <p class="salary">How to Start: Earn a degree in education, English, or a specific subject area, and gain experience in teaching or content development.</p>
+        </div>
+
+        <!-- Job 6: Educational Consultant -->
+        <div class="job-card">
+            <div class="icon">&#128206;</div> <!-- Consultant Icon -->
+            <h3>Educational Consultant</h3>
+            <p>Educational Consultants advise schools, teachers, and educational organizations on best practices, curriculum development, and teaching strategies.</p>
+            <p><strong>Skills:</strong> Research, problem-solving, communication, and project management.</p>
+            <p><strong>Salary:</strong> ₹6-18 LPA</p>
+            <p class="salary">How to Start: Gain experience in teaching or administration, and pursue certification in education consulting.</p>
+        </div>
+
+        <!-- Job 7: Tutor -->
+        <div class="job-card">
+            <div class="icon">&#128218;</div> <!-- Tutor Icon -->
+            <h3>Tutor</h3>
+            <p>Tutors provide one-on-one or small group instruction to help students improve their academic performance in specific subjects.</p>
+            <p><strong>Skills:</strong> Subject knowledge, communication, patience, and teaching techniques.</p>
+            <p><strong>Salary:</strong> ₹2-6 LPA</p>
+            <p class="salary">How to Start: Offer tutoring services in subjects you are knowledgeable about and gain experience through private or online tutoring platforms.</p>
+        </div>
+
+        <!-- Job 8: Education Coordinator -->
+        <div class="job-card">
+            <div class="icon">&#128204;</div> <!-- Coordinator Icon -->
+            <h3>Education Coordinator</h3>
+            <p>Education Coordinators manage the implementation of educational programs, ensure that all activities run smoothly, and collaborate with teachers and administrators.</p>
+            <p><strong>Skills:</strong> Organizational skills, teamwork, leadership, project management.</p>
+            <p><strong>Salary:</strong> ₹4-10 LPA</p>
+            <p class="salary">How to Start: Pursue a degree in education and gain experience in school administration or program coordination.</p>
+        </div>
+
+        <!-- Job 9: Education Technology Specialist -->
+        <div class="job-card">
+            <div class="icon">&#128187;</div> <!-- Tech Icon -->
+            <h3>Education Technology Specialist</h3>
+            <p>Education Technology Specialists help integrate technology into classrooms, advising on the best educational software and tools for enhancing learning.</p>
+            <p><strong>Skills:</strong> Technology integration, educational software, training, problem-solving.</p>
+            <p><strong>Salary:</strong> ₹5-15 LPA</p>
+            <p class="salary">How to Start: Obtain a degree in educational technology or a related field and gain experience with classroom technology.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Education Career Portal | All rights reserved.</p>
+    </div>
+
+</body>
+</html>
+{% endblock %}

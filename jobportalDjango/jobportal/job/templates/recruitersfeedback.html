@@ -1,0 +1,81 @@
+{% load static %}
+{% block body %}
+{% include 'admin_navigation.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Feedback</title>
+    <link rel="stylesheet" href="{% static 'path/to/font-awesome.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .feedback-box {
+            background-color: #e9ecef;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .feedback-box p {
+            margin: 5px 0;
+        }
+        .feedback-box .company {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .feedback-box .email {
+            color: #666;
+        }
+        .feedback-box .comment {
+            color: #444;
+            margin-top: 10px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            margin-top: 410px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Recruiter Feedback</h2>
+    {% for feedback in recruiter_feedback %}
+        <div class="feedback-box">
+            <p class="company">{{ feedback.company }}</p>
+            <p class="email">{{ feedback.email }}</p>
+            <p class="comment">{{ feedback.feedback }}</p>
+        </div>
+    {% empty %}
+        <p>No feedback submitted yet.</p>
+    {% endfor %}
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Career Connect Job Portal. All Rights Reserved.</p>
+</div>
+
+</body>
+</html>
+{% endblock %}

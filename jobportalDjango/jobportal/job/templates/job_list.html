@@ -1,0 +1,126 @@
+{% load static %}
+{% block body %}
+{% include 'recruiter_navigation.html' %}
+
+<style>
+  tr {
+    text-align: center;
+  }
+
+  table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color:  #007bff;
+    color: white;
+  }
+
+  .btn {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .btn-success {
+    background-color: #28a745;
+  }
+
+  .btn-success:hover {
+    background-color: #218838;
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+  }
+
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+
+  .container {
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .search-box {
+    margin: 10px auto 20px;
+    text-align: center;
+  }
+
+  .search-box input {
+    padding: 5px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .search-box button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .search-box button:hover {
+    background-color: #333399;
+  }
+</style>
+
+<marquee style="font-family: 'Monotype Corsiva'; font-size: 25px; color: white; font-weight: bold; background-color: black;">
+  Manage Job Details
+</marquee>
+<hr>
+
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Job Title</th>
+        <th>Creation Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in job %}
+      <tr class="highlight-row" style="background-color: white;">
+        <td>{{ forloop.counter }}</td>
+        <td>{{ i.title }}</td>
+        <td>{{ i.creationdate }}</td>
+        <td>
+          <a href="{% url 'edit_jobdetail' i.id %}" class="btn btn-success">Edit</a>
+          <form method="post" action="{% url 'delete_jobdetail' i.id %}" style="display: inline;">
+                 {% csrf_token %}
+              <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this job?');">
+                  Delete
+              </button>
+           </form>
+
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="4">No jobs found.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+ <div class="footer" style="background-color: #333; color: white; padding: 15px; text-align: center; width: 100%; margin-top: 510px;">
+        <p>&copy; 2024 Career Connect Job Portal. All Rights Reserved.</p>
+    </div>
+{% endblock %}

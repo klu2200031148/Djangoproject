@@ -1,0 +1,96 @@
+<!-- job_app/templates/job_app/contact_us.html -->
+
+{% load static %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us & Contact Us</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    background-image: url("{% static 'images/contactus.png' %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>About Us</h1>
+    <p>At Career Connect, we are dedicated to bridging the gap between job seekers and recruiters. Our platform serves as a vital link in the employment ecosystem, facilitating meaningful connections that lead to fulfilling careers.</p>
+    <p>With a commitment to excellence, we provide job seekers with access to a diverse range of opportunities across various industries and skill levels. Through our innovative approach and user-friendly interface, navigating the job market has never been easier.</p>
+    <p>At Career Connect, we understand the importance of personalization and human connection in the recruitment process. That's why we offer personalized support and guidance every step of the way. Whether you're a job seeker seeking your dream job or a recruiter looking to fill a critical role, Career Connect is here to help you succeed.</p>
+    <p>For recruiters, Career Connect offers a streamlined recruitment process, enabling efficient candidate sourcing and selection. Our comprehensive platform empowers organizations to find top talent and build high-performing teams.</p>
+    <p>For any inquiries or assistance, please don't hesitate to reach out to us. Simply provide your details, and our dedicated team will contact you within a couple of days to assist you further.</p>
+
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="{% url 'contactus' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        alert('Your message has been successfully submitted!');
+    });
+</script>
+
+</body>
+</html>
+{% endblock %}

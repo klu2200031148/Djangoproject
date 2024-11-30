@@ -1,0 +1,113 @@
+{% load static %}
+{% block body %}
+{% include 'navigation.html' %}
+
+<marquee style="font-family: 'Monotype Corsiva'; font-size: 25px; color: white; font-weight: bold; background-color: black">
+  Recruiter SignUp
+</marquee>
+<hr>
+<form class="container mt-5" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <div class="form-group">
+    <label for="fname">First Name</label>
+    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter First Name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="lname">Last Name</label>
+    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Last Name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="image">Profile Image</label>
+    <input type="file" class="form-control" id="image" name="image" required>
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">Password</label>
+    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter Password" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="contact">Contact</label>
+    <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter Contact" required>
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <select class="form-control" id="gender" name="gender" required>
+      <option value="">Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="company">Company Name</label>
+    <input type="text" class="form-control" id="company" name="company" placeholder="Enter Company Name" required>
+  </div>
+
+  <input type="submit" value="Submit" class="btn btn-primary my-3" style="width: 200px">
+</form>
+  <!-- Footer positioned directly below the form -->
+    <div class="footer" style="background-color: #333; color: white; padding: 15px; text-align: center; width: 100%; margin-top: 10px;">
+        <p>&copy; 2024 Career Connect Job Portal. All Rights Reserved.</p>
+    </div>
+<script>
+const pwdInput = document.getElementById('pwd');
+const pwdInfo = document.getElementById('pwd-info');
+const signupForm = document.getElementById('signupForm');
+const submitBtn = signupForm.querySelector('input[type="submit"]');
+
+// Define password validation function using a regular expression
+function validatePassword(password) {
+  const pwdRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\s]).{8,}$/; // Ensures at least 8 characters with at least one digit, lowercase, uppercase, and special character
+  return pwdRegex.test(password);
+}
+
+// Add event listener to password input for real-time validation feedback
+pwdInput.addEventListener('keyup', function() {
+  const password = this.value;
+  const isValid = validatePassword(password);
+
+  pwdInfo.textContent = ''; // Clear previous messages before displaying new ones
+
+  if (isValid) {
+    pwdInfo.textContent = 'Password is strong!';
+    pwdInfo.classList.remove('text-danger');
+    pwdInfo.classList.add('text-success');
+    submitBtn.disabled = false; // Enable submit button if password is valid
+  } else {
+    pwdInfo.textContent = 'Password must be at least 8 characters and include a digit, lowercase letter, uppercase letter, and a special character.';
+    pwdInfo.classList.add('text-danger');
+    pwdInfo.classList.remove('text-success');
+    submitBtn.disabled = true; // Disable submit button if password is invalid
+  }
+});
+
+// Add event listener to confirm password input for matching validation
+signupForm.addEventListener('submit', function(event) {
+  const password = pwdInput.value;
+  const confirmPassword = document.getElementById('cpwdc').value;
+
+  if (password !== confirmPassword) {
+    event.preventDefault(); // Prevent form submission if passwords don't match
+    alert('Passwords do not match! Please re-enter passwords.');
+  }
+});
+</script>
+
+{% if error == "no" %}
+  {% endif %}
+
+{% if error == "yes" %}
+  {% endif %}
+
+{% endblock %}

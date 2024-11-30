@@ -1,0 +1,200 @@
+{% load static %}
+{% block content %}
+{% include 'user_navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Get a Job in Finance</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #2d3e50;
+            color: white;
+        }
+        .header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        .job-container {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .job-card:hover {
+            transform: scale(1.05);
+        }
+        .job-card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #2d3e50;
+        }
+        .job-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .job-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .job-card .salary {
+            font-weight: bold;
+            color: #2d3e50;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            color: #333;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .tips-list {
+            list-style-type: none;
+            padding: 10;
+            text-align: center;
+        }
+        .tips-list p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section-title">
+        <h2>How to Get and Succeed in Finance Jobs</h2>
+    </div>
+    <div class="tips-list">
+        <ul>
+            <p>Obtain a degree in finance, accounting, or economics.</p>
+            <p>Get certified in specialized areas like CFA, CPA, or Financial Modeling.</p>
+            <p>Develop strong analytical and problem-solving skills.</p>
+            <p>Understand the importance of financial regulations and reporting standards.</p>
+            <p>Stay updated on the latest financial tools and technologies.</p>
+            <p>Network with finance professionals and attend industry events.</p>
+        </ul>
+    </div>
+
+    <div class="job-container">
+        <!-- Job 1: Financial Analyst -->
+        <div class="job-card">
+            <div class="icon">&#128201;</div> <!-- Financial Graph Icon -->
+            <h3>Financial Analyst</h3>
+            <p>Financial Analysts evaluate financial data, create reports, and help guide decisions on investments, budgeting, and forecasting.</p>
+            <p><strong>Skills:</strong> Excel, financial modeling, data analysis, budgeting, and forecasting.</p>
+            <p><strong>Salary:</strong> ₹6-15 LPA</p>
+            <p class="salary">How to Start: Get a degree in finance or accounting and gain experience in financial reporting and analysis.</p>
+        </div>
+
+        <!-- Job 2: Investment Banker -->
+        <div class="job-card">
+            <div class="icon">&#128187;</div> <!-- Bank Icon -->
+            <h3>Investment Banker</h3>
+            <p>Investment Bankers help companies raise capital by issuing stocks, bonds, and other financial instruments and advising on mergers and acquisitions.</p>
+            <p><strong>Skills:</strong> Financial modeling, negotiation, analytical skills, corporate finance.</p>
+            <p><strong>Salary:</strong> ₹10-40 LPA</p>
+            <p class="salary">How to Start: Obtain a degree in finance or economics, and pursue investment banking internships to build experience.</p>
+        </div>
+
+        <!-- Job 3: Corporate Finance Manager -->
+        <div class="job-card">
+            <div class="icon">&#128179;</div> <!-- Corporate Finance Icon -->
+            <h3>Corporate Finance Manager</h3>
+            <p>Corporate Finance Managers oversee a company's financial operations, including managing budgets, forecasts, and financial strategies.</p>
+            <p><strong>Skills:</strong> Budgeting, financial analysis, financial reporting, management skills.</p>
+            <p><strong>Salary:</strong> ₹8-25 LPA</p>
+            <p class="salary">How to Start: Develop experience in accounting, financial analysis, and business management.</p>
+        </div>
+
+        <!-- Job 4: Financial Planner -->
+        <div class="job-card">
+            <div class="icon">&#128222;</div> <!-- Planner Icon -->
+            <h3>Financial Planner</h3>
+            <p>Financial Planners help individuals and businesses plan their financial future, providing advice on budgeting, investments, and retirement planning.</p>
+            <p><strong>Skills:</strong> Client management, investment strategies, budgeting, retirement planning.</p>
+            <p><strong>Salary:</strong> ₹6-20 LPA</p>
+            <p class="salary">How to Start: Earn a degree in finance or economics and obtain certifications like CFP or CFA to enhance credibility.</p>
+        </div>
+
+        <!-- Job 5: Risk Manager -->
+        <div class="job-card">
+            <div class="icon">&#128273;</div> <!-- Risk Icon -->
+            <h3>Risk Manager</h3>
+            <p>Risk Managers identify and analyze potential risks to the financial health of a company, ensuring they have plans in place to mitigate those risks.</p>
+            <p><strong>Skills:</strong> Risk assessment, financial analysis, data analysis, strategic planning.</p>
+            <p><strong>Salary:</strong> ₹10-25 LPA</p>
+            <p class="salary">How to Start: Gain experience in financial analysis or management, and specialize in risk management through further education.</p>
+        </div>
+
+        <!-- Job 6: Accountant -->
+        <div class="job-card">
+            <div class="icon">&#128179;</div> <!-- Accountant Icon -->
+            <h3>Accountant</h3>
+            <p>Accountants manage and record financial transactions, prepare financial statements, and ensure the company’s financial records are accurate.</p>
+            <p><strong>Skills:</strong> Accounting software (like QuickBooks), financial reporting, attention to detail, auditing.</p>
+            <p><strong>Salary:</strong> ₹3-8 LPA</p>
+            <p class="salary">How to Start: Complete a degree in accounting and obtain certification like CPA to advance in the field.</p>
+        </div>
+
+        <!-- Job 7: Tax Consultant -->
+        <div class="job-card">
+            <div class="icon">&#128176;</div> <!-- Tax Icon -->
+            <h3>Tax Consultant</h3>
+            <p>Tax Consultants advise individuals and businesses on tax planning and compliance, helping them optimize their tax obligations.</p>
+            <p><strong>Skills:</strong> Tax law, financial analysis, tax preparation, problem-solving.</p>
+            <p><strong>Salary:</strong> ₹5-12 LPA</p>
+            <p class="salary">How to Start: Study tax law and taxation principles, and gain practical experience in accounting or tax preparation.</p>
+        </div>
+
+        <!-- Job 8: Treasury Analyst -->
+        <div class="job-card">
+            <div class="icon">&#128181;</div> <!-- Treasury Icon -->
+            <h3>Treasury Analyst</h3>
+            <p>Treasury Analysts manage a company’s finances, ensuring they have the necessary funds to meet obligations, and managing investments and cash flow.</p>
+            <p><strong>Skills:</strong> Cash flow management, financial reporting, financial forecasting, treasury management software.</p>
+            <p><strong>Salary:</strong> ₹6-18 LPA</p>
+            <p class="salary">How to Start: Pursue a degree in finance and gain experience with financial forecasting and cash management.</p>
+        </div>
+
+        <!-- Job 9: Chief Financial Officer (CFO) -->
+        <div class="job-card">
+            <div class="icon">&#128185;</div> <!-- CFO Icon -->
+            <h3>Chief Financial Officer (CFO)</h3>
+            <p>CFOs oversee all financial activities of a company, including financial planning, risk management, and reporting.</p>
+            <p><strong>Skills:</strong> Leadership, financial strategy, risk management, financial reporting, corporate finance.</p>
+            <p><strong>Salary:</strong> ₹25-75 LPA</p>
+            <p class="salary">How to Start: Work your way up through various finance roles, gaining experience in corporate finance and leadership.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Finance Career Portal | All rights reserved.</p>
+    </div>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,201 @@
+{% load static %}
+{% block content %}
+{% include 'user_navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Get a Job in Construction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #3c4b61;
+            color: white;
+        }
+        .header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        .job-container {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .job-card:hover {
+            transform: scale(1.05);
+        }
+        .job-card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #3c4b61;
+        }
+        .job-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .job-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+      .job-card .salary {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            color: #333;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .tips-list {
+            list-style-type: none;
+            padding: 10;
+            text-align: center;
+        }
+        .tips-list p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section-title">
+        <h2>How to Get and Succeed in Construction Jobs</h2>
+    </div>
+    <div class="tips-list">
+        <ul>
+            <p>Get relevant training for the job you are interested in.</p>
+            <p>Start with an entry-level position to gain hands-on experience in construction projects.</p>
+            <p>Learn the safety protocols and regulations in the construction industry.</p>
+            <p>Develop strong problem-solving, teamwork, and communication skills.</p>
+            <p>Stay updated on new construction technologies and materials.</p>
+            <p>Consider pursuing a degree or certification in construction management or a related field for higher-level positions.</p>
+        </ul>
+    </div>
+
+    <div class="job-container">
+
+        <!-- Job 1: Civil Engineer -->
+        <div class="job-card">
+            <div class="icon">&#128736;</div> <!-- Engineer Icon -->
+            <h3>Civil Engineer</h3>
+            <p>Civil Engineers design, plan, and oversee the construction of infrastructure projects like roads, bridges, and buildings.</p>
+            <p><strong>Skills:</strong> Analytical skills, problem-solving, design knowledge, project management.</p>
+            <p><strong>Salary:</strong> ₹6-20 LPA</p>
+            <p class="salary">How to Start: Obtain a degree in Civil Engineering and gain experience through internships or entry-level engineering positions.</p>
+        </div>
+
+
+        <!-- Job 2: Construction Manager -->
+        <div class="job-card">
+            <div class="icon">&#128736;</div> <!-- Manager Icon -->
+            <h3>Construction Manager</h3>
+            <p>Construction Managers oversee and manage construction projects, ensuring that work is completed on time and within budget.</p>
+            <p><strong>Skills:</strong> Leadership, communication, project management, budgeting.</p>
+            <p><strong>Salary:</strong> ₹10-30 LPA</p>
+            <p class="salary">How to Start: Gain experience in construction or civil engineering and pursue a degree in construction management.</p>
+        </div>
+
+        <!-- Job 3: Architect -->
+        <div class="job-card">
+            <div class="icon">&#128736;</div> <!-- Architect Icon -->
+            <h3>Architect</h3>
+            <p>Architects design the layout and structure of buildings, ensuring that designs are functional, aesthetically pleasing, and structurally sound.</p>
+            <p><strong>Skills:</strong> Creativity, design knowledge, technical expertise, communication skills.</p>
+            <p><strong>Salary:</strong> ₹8-25 LPA</p>
+            <p class="salary">How to Start: Obtain a degree in architecture and gain experience through internships or junior architect roles.</p>
+        </div>
+
+        <!-- Job 4: Project Engineer -->
+        <div class="job-card">
+            <div class="icon">&#128736;</div> <!-- Engineer Icon -->
+            <h3>Project Engineer</h3>
+            <p>Project Engineers manage engineering projects, working closely with construction teams to ensure that the design specifications are met.</p>
+            <p><strong>Skills:</strong> Project management, technical knowledge, communication, teamwork.</p>
+            <p><strong>Salary:</strong> ₹5-15 LPA</p>
+            <p class="salary">How to Start: Obtain a degree in engineering and gain experience in managing projects or working as an assistant project engineer.</p>
+        </div>
+
+        <!-- Job 5: Safety Officer -->
+        <div class="job-card">
+            <div class="icon">&#128737;</div> <!-- Safety Officer Icon -->
+            <h3>Safety Officer</h3>
+            <p>Safety Officers ensure that construction sites follow health and safety regulations, minimizing accidents and injuries.</p>
+            <p><strong>Skills:</strong> Knowledge of safety regulations, attention to detail, communication, risk assessment.</p>
+            <p><strong>Salary:</strong> ₹4-10 LPA</p>
+            <p class="salary">How to Start: Obtain a degree or certification in occupational health and safety and gain experience in construction or industrial safety roles.</p>
+        </div>
+  <!-- Job 6: Construction Laborer -->
+        <div class="job-card">
+            <div class="icon">&#128736;</div> <!-- Laborer Icon -->
+            <h3>Construction Laborer</h3>
+            <p>Construction Laborers perform various tasks on construction sites, including digging, loading materials, and helping with the assembly of structures.</p>
+            <p><strong>Skills:</strong> Physical strength, attention to detail, ability to follow instructions, teamwork.</p>
+            <p><strong>Salary:</strong> ₹2-5 LPA</p>
+            <p class="salary">How to Start: Start with an apprenticeship or as a general laborer and work your way up with experience.</p>
+        </div>
+
+        <!-- Job 7: Carpenter -->
+        <div class="job-card">
+            <div class="icon">&#128736;</div> <!-- Carpenter Icon -->
+            <h3>Carpenter</h3>
+            <p>Carpenters build, install, and repair structures made of wood and other materials in construction projects.</p>
+            <p><strong>Skills:</strong> Manual dexterity, precision, knowledge of carpentry tools, problem-solving.</p>
+            <p><strong>Salary:</strong> ₹3-8 LPA</p>
+            <p class="salary">How to Start: Complete an apprenticeship program and gain hands-on experience in carpentry work.</p>
+        </div>
+
+        <!-- Job 8: Electrician -->
+        <div class="job-card">
+            <div class="icon">&#128736;</div> <!-- Electrician Icon -->
+            <h3>Electrician</h3>
+            <p>Electricians install, maintain, and repair electrical systems in buildings and construction sites.</p>
+            <p><strong>Skills:</strong> Electrical knowledge, troubleshooting, attention to detail, safety practices.</p>
+            <p><strong>Salary:</strong> ₹3-8 LPA</p>
+            <p class="salary">How to Start: Complete an apprenticeship program or vocational training in electrical work and gain experience.</p>
+        </div>
+
+        <!-- Job 9: Plumber -->
+        <div class="job-card">
+            <div class="icon">&#128736;</div> <!-- Plumber Icon -->
+            <h3>Plumber</h3>
+            <p>Plumbers install and maintain piping systems in buildings and on construction sites.</p>
+            <p><strong>Skills:</strong> Knowledge of plumbing systems, problem-solving, attention to detail.</p>
+            <p><strong>Salary:</strong> ₹3-7 LPA</p>
+            <p class="salary">How to Start: Complete a vocational program or apprenticeship and gain experience in plumbing work.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Construction Career Portal | All rights reserved.</p>
+    </div>
+
+</body>
+</html>
+{% endblock %}

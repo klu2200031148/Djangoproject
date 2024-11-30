@@ -1,0 +1,33 @@
+{% block body %}
+{% include 'recruiter_navigation.html' %}
+
+<h1 style="text-align: center; color: #007bff;">Jobs Posted by You</h1>
+
+<table style="width: 90%; margin: 20px auto; border-collapse: collapse;">
+    <thead>
+        <tr style="background-color: #000080; color: white;">
+            <th>S.No</th>
+            <th>Job Title</th>
+            <th>Applications</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for job in jobs %}
+            <tr style="text-align: center; background-color: #f9f9f9;">
+                <td>{{ forloop.counter }}</td>
+                <td>{{ job.title }}</td>
+                <td>{{ job.application_set.count }}</td>
+                <td>
+                    <a href="{% url 'job_applicants' job.id %}" class="view-btn" style="padding: 5px 10px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px;">View Applicants</a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="4" style="text-align: center; color: #999;">No jobs posted yet.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

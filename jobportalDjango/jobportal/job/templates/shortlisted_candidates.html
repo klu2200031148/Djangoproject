@@ -1,0 +1,97 @@
+{% load static %}
+
+{% block body %}
+{% include 'recruiter_navigation.html' %}
+<style>
+     }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        table td {
+            background-color: #f9f9f9;
+        }
+
+        .view-btn, .shortlist-btn {
+            padding: 5px 10px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .view-btn:hover, .shortlist-btn:hover {
+            background-color: #218838;
+        }
+
+        .shortlisted-count {
+            color: #007bff;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+</style>
+<h1>Shortlisted Candidates for {{ job.title }}</h1>
+
+<table style="width: 90%; margin: 20px auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="padding: 8px; border: 1px solid #ddd; background-color: #007bff; color: white;">Name</th>
+            <th style="padding: 8px; border: 1px solid #ddd; background-color: #007bff; color: white;">Email</th>
+            <th style="padding: 8px; border: 1px solid #ddd; background-color: #007bff; color: white;">Phone</th>
+            <th style="padding: 8px; border: 1px solid #ddd; background-color: #007bff; color: white;">Experience Level</th>
+            <th style="padding: 8px; border: 1px solid #ddd; background-color: #007bff; color: white;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for candidate in job.shortlisted_candidates.all %}
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd; background-color: #f9f9f9;">{{ candidate.name }}</td>
+                <td style="padding: 8px; border: 1px solid #ddd; background-color: #f9f9f9;">{{ candidate.email }}</td>
+                <td style="padding: 8px; border: 1px solid #ddd; background-color: #f9f9f9;">{{ candidate.phone }}</td>
+                <td style="padding: 8px; border: 1px solid #ddd; background-color: #f9f9f9;">{{ candidate.experience_level }}</td>
+                <td style="padding: 8px; border: 1px solid #ddd; background-color: #f9f9f9;">
+                    <a class="view-btn" href="{% url 'view_application_details' candidate.id %}">View Details</a>
+                    <!-- Shortlist button with confirmation -->
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="5" style="text-align: center; color: #999; padding: 20px;">No shortlisted candidates yet.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    // JavaScript function to confirm shortlisting action
+    function confirmShortlist() {
+        return confirm("Are you sure you want to shortlist this candidate?");
+    }
+</script>
+  <div class="footer">
+        <p>&copy; 2024 Career Connect Job Portal. All Rights Reserved.</p>
+    </div>
+{% endblock %}

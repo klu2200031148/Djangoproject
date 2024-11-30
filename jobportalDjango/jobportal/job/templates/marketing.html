@@ -1,0 +1,200 @@
+{% load static %}
+{% block content %}
+{% include 'user_navigation.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Get a Job in Marketing</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #ff6f61;
+            color: white;
+        }
+        .header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        .job-container {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .job-card:hover {
+            transform: scale(1.05);
+        }
+        .job-card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #ff6f61;
+        }
+        .job-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .job-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+         .job-card .salary {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            color: #333;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .tips-list {
+            list-style-type: none;
+            padding: 10;
+            text-align: center;
+        }
+        .tips-list p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section-title">
+        <h2>How to Get and Succeed in Marketing Jobs</h2>
+    </div>
+    <div class="tips-list">
+        <ul>
+            <p>Develop a strong understanding of marketing principles through courses and certifications.</p>
+            <p>Build your personal brand online through social media and blogs.</p>
+            <p>Stay updated with the latest marketing trends and technologies.</p>
+            <p>Develop strong communication and creative skills.</p>
+            <p>Network with marketing professionals and attend industry events.</p>
+            <p>Practice analytical thinking and data-driven decision making.</p>
+        </ul>
+    </div>
+
+    <div class="job-container">
+        <!-- Job 1: Digital Marketing Manager -->
+        <div class="job-card">
+            <div class="icon">&#128187;</div> <!-- Laptop Icon -->
+            <h3>Digital Marketing Manager</h3>
+            <p>A Digital Marketing Manager is responsible for creating and managing marketing campaigns across digital platforms.</p>
+            <p><strong>Skills:</strong> SEO, SEM, content marketing, analytics, social media strategies.</p>
+            <p><strong>Salary:</strong> ₹8-20 LPA</p>
+            <p class="salary">How to Start: Gain expertise in digital marketing tools and platforms like Google Analytics, SEO, and social media marketing.</p>
+        </div>
+
+        <!-- Job 2: Content Marketing Specialist -->
+        <div class="job-card">
+            <div class="icon">&#128220;</div> <!-- Content Icon -->
+            <h3>Content Marketing Specialist</h3>
+            <p>Content Marketing Specialists create content to attract and engage customers, driving brand awareness and conversions.</p>
+            <p><strong>Skills:</strong> Copywriting, SEO, creativity, content strategy, blogging, and storytelling.</p>
+            <p><strong>Salary:</strong> ₹4-8 LPA</p>
+            <p class="salary">How to Start: Build a portfolio of content and practice writing for blogs, websites, or social media.</p>
+        </div>
+
+        <!-- Job 3: Social Media Manager -->
+        <div class="job-card">
+            <div class="icon">&#128249;</div> <!-- Social Media Icon -->
+            <h3>Social Media Manager</h3>
+            <p>Social Media Managers develop strategies to increase brand visibility, manage social media accounts, and engage with customers.</p>
+            <p><strong>Skills:</strong> Social media platforms (Facebook, Instagram, LinkedIn), content creation, analytics, communication skills.</p>
+            <p><strong>Salary:</strong> ₹5-10 LPA</p>
+            <p class="salary">How to Start: Gain expertise in social media marketing tools and platforms and create content for different social media networks.</p>
+        </div>
+
+        <!-- Job 4: Brand Manager -->
+        <div class="job-card">
+            <div class="icon">&#128178;</div> <!-- Brand Icon -->
+            <h3>Brand Manager</h3>
+            <p>Brand Managers are responsible for developing and maintaining a brand's image, ensuring consistency across all marketing materials.</p>
+            <p><strong>Skills:</strong> Branding, market research, project management, creative thinking, communication.</p>
+            <p><strong>Salary:</strong> ₹10-25 LPA</p>
+            <p class="salary">How to Start: Study marketing, focus on consumer psychology and brand management strategies.</p>
+        </div>
+
+        <!-- Job 5: Marketing Analyst -->
+        <div class="job-card">
+            <div class="icon">&#128200;</div> <!-- Graph Icon -->
+            <h3>Marketing Analyst</h3>
+            <p>Marketing Analysts study market trends, consumer behavior, and sales data to guide marketing strategies and decisions.</p>
+            <p><strong>Skills:</strong> Data analysis, research, statistics, market trends, and Excel or other analytical tools.</p>
+            <p><strong>Salary:</strong> ₹6-12 LPA</p>
+            <p class="salary">How to Start: Get a degree in marketing, economics, or business, and hone your data analysis skills.</p>
+        </div>
+
+        <!-- Job 6: SEO Specialist -->
+        <div class="job-card">
+            <div class="icon">&#128269;</div> <!-- Search Icon -->
+            <h3>SEO Specialist</h3>
+            <p>An SEO Specialist optimizes website content to rank higher in search engine results and drive organic traffic.</p>
+            <p><strong>Skills:</strong> SEO, keyword research, on-page and off-page optimization, Google Analytics, content marketing.</p>
+            <p><strong>Salary:</strong> ₹4-10 LPA</p>
+            <p class="salary">How to Start: Learn SEO fundamentals, including keyword research, backlinking, and SEO tools like Google Search Console.</p>
+        </div>
+
+        <!-- Job 7: Email Marketing Specialist -->
+        <div class="job-card">
+            <div class="icon">&#128233;</div> <!-- Email Icon -->
+            <h3>Email Marketing Specialist</h3>
+            <p>Email Marketing Specialists create campaigns that engage customers and drive conversions through email marketing platforms.</p>
+            <p><strong>Skills:</strong> Email automation, writing persuasive copy, segmentation, analytics, A/B testing.</p>
+            <p><strong>Salary:</strong> ₹5-8 LPA</p>
+            <p class="salary">How to Start: Learn to use email marketing platforms like Mailchimp and Constant Contact and study effective email strategies.</p>
+        </div>
+
+        <!-- Job 8: Public Relations Manager -->
+        <div class="job-card">
+            <div class="icon">&#128241;</div> <!-- PR Icon -->
+            <h3>Public Relations Manager</h3>
+            <p>PR Managers handle the public image of the company, manage media relations, and help promote positive publicity.</p>
+            <p><strong>Skills:</strong> Communication, media relations, crisis management, event planning, and networking.</p>
+            <p><strong>Salary:</strong> ₹6-15 LPA</p>
+            <p class="salary">How to Start: Build your writing and media relations skills and gain experience in public speaking and event planning.</p>
+        </div>
+
+        <!-- Job 9: Marketing Director -->
+        <div class="job-card">
+            <div class="icon">&#128189;</div> <!-- Director Icon -->
+            <h3>Marketing Director</h3>
+            <p>Marketing Directors are responsible for overseeing all marketing activities and leading teams to execute marketing strategies effectively.</p>
+            <p><strong>Skills:</strong> Leadership, strategy, campaign management, analytics, and financial management.</p>
+            <p><strong>Salary:</strong> ₹20-50 LPA</p>
+            <p class="salary">How to Start: Gain extensive experience in marketing roles, including leadership and strategic planning.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Marketing Career Portal | All rights reserved.</p>
+    </div>
+
+</body>
+</html>
+{% endblock %}

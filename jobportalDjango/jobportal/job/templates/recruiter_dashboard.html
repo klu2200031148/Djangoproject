@@ -1,0 +1,151 @@
+{% load static %}
+
+{% block body %}
+{% include 'recruiter_navigation.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        table td {
+            background-color: #f9f9f9;
+        }
+
+        .view-btn, .shortlist-btn {
+            padding: 5px 10px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .view-btn:hover, .shortlist-btn:hover {
+            background-color: #218838;
+        }
+
+        .shortlisted-count {
+            color: #007bff;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        // JavaScript to confirm shortlist action
+        function confirmShortlist(event) {
+            event.preventDefault();
+            var confirmation = confirm("Are you sure you want to shortlist this candidate?");
+            if (confirmation) {
+                window.location.href = event.target.href; // Proceed with the shortlist
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Applications for Your Posted Jobs</h1>
+
+    <div style="width: 90%; margin: 20px auto; font-family: Arial, sans-serif; text-align: left;">
+        <h2 style="color: #333;">Jobs Posted and Applications Received</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            {% for job, applications in job_applications.items %}
+                <li style="margin: 10px 0; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9; border-radius: 5px;">
+                    <strong>{{ job.title }}</strong>
+                    <span style="color: #007bff;">({{ applications|length }} Applicants)</span>
+
+                    <!-- Display shortlisted candidates count -->
+                    {% if job.shortlisted_candidates %}
+                        <div class="shortlisted-count">
+                            Shortlisted Candidates: {{ job.shortlisted_candidates.count }}
+                        </div>
+                    {% else %}
+                        <div class="shortlisted-count">
+                            No shortlisted candidates yet.
+                        </div>
+                    {% endif %}
+                    <br><br>
+
+                    <!-- Add a button to view shortlisted candidates -->
+                    <a href="{% url 'view_shortlisted_candidates' job.id %}" class="view-btn">View Shortlisted Candidates</a>
+                </li>
+            {% empty %}
+                <li style="text-align: center; color: #999; margin-top: 20px;">No jobs posted yet.</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% for job, applications in job_applications.items %}
+        <h2 style="text-align: center; color: #007bff;">{{ job.title }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Experience Level</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for application in applications %}
+                    <tr>
+                        <td>{{ application.name }}</td>
+                        <td>{{ application.email }}</td>
+                        <td>{{ application.phone }}</td>
+                        <td>{{ application.experience_level }}</td>
+                        <td>
+                            <a class="view-btn" href="{% url 'view_application_details' application.id %}">View Details</a>
+                            <!-- Add a shortlist button next to view details with confirmation -->
+                            <a href="{% url 'shortlist_candidate' job.id application.id %}" class="shortlist-btn" onclick="confirmShortlist(event)">Shortlist</a>
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="5" style="text-align: center; color: #999;">No applications for this job yet.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endfor %}
+
+    <!-- Footer -->
+    <footer style="background-color: #333; color: white; padding: 15px; text-align: center; margin-top: 500px;">
+        <p>&copy; 2024 Career Connect Job Portal. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+{% endblock %}
